@@ -17,3 +17,18 @@
 //    console.log(trNode);
    
 // }
+
+function deletee(btn) {
+    const parentNode = btn.parentElement.parentElement;
+
+    const name = parentNode.childNodes[5];
+    console.log(name);
+    const nameP = name.childNodes[3];
+    nameP.remove();
+    const para = document.createElement('div');
+    para.classList.add('form-outline');
+    para.innerHTML=`<input type="text" id="form12" class="form-control" />
+    <label class="form-label" for="form12">input</label>`;
+    name.appendChild(para);
+}
+
